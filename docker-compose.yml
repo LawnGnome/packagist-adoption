@@ -1,19 +1,14 @@
-version: '2'
+redis:
+    image: redis
 
-services:
-    redis:
-        image: redis
-
-    web:
-        build: 
-            context: .
-            dockerfile: php/Dockerfile
-        ports:
-            - 8070:80
-        links:
-            - redis
-        volumes:
-            - .:/var/www:ro
-            - ./php/php.ini:/usr/local/etc/php/php.ini:ro
+web:
+    build: php
+    ports:
+        - 8070:80
+    links:
+        - redis
+    volumes:
+        - .:/var/www:ro
+        - ./php/php.ini:/usr/local/etc/php/php.ini:ro
   
 # vim: set et ts=4 sw=4:
