@@ -1,0 +1,15 @@
+{
+    "require": {
+        "predis/service-provider": "dev-master",
+        "silex/silex": "^2",
+        "guzzlehttp/guzzle": "^6"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^5.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "LawnGnome\\PackagistAdoption\\": "src/"
+        }
+    }
+}
