@@ -1,0 +1,3 @@
+[submodule "html/js/palette.js"]
+	path = html/js/palette.js
+	url = https://github.com/google/palette.js

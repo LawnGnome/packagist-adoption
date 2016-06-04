@@ -82,6 +82,9 @@ class Package implements JsonSerializable {
 				continue;
 			}
 
+			// Other special case: remove prefixed v.
+			$sumver = ltrim($sumver, 'v');
+
 			if (!isset($summary[$sumver])) {
 				$summary[$sumver] = new Version;
 			}

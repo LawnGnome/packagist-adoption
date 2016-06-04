@@ -12,6 +12,8 @@
 
 		<!-- Optional theme -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+		<link rel="stylesheet" href="/css/style.css">
 	</head>
 	<body>
 		<nav class="navbar navbar-inverse navbar-fixed-top">
@@ -29,13 +31,37 @@
 		</nav>
 
 		<div class="container">
-			<h2 id="package-name"></h2>
+			<h2 id="package-name">&nbsp;</h2>
+
+			<div id="overlay">
+				<ul class="nav nav-pills" role="tablist">
+					<li role="presentation" class="active"><a href="#major" role="tab" data-toggle="pill">Major</a></li>
+					<li role="presentation"><a href="#minor" role="tab" data-toggle="pill">Minor</a></li>
+					<li role="presentation"><a href="#all" role="tab" data-toggle="pill">All versions</a></li>
+				</ul>
+
+				<div class="tab-content">
+					<div role="tabpanel" class="tab-pane active" id="major">
+						<canvas class="chart" id="major-chart"></canvas>
+					</div>
+
+					<div role="tabpanel" class="tab-pane" id="minor">
+						<canvas class="chart" id="minor-chart"></canvas>
+					</div>
+
+					<div role="tabpanel" class="tab-pane" id="all">
+						<canvas class="chart" id="all-chart"></canvas>
+					</div>
+				</div>
+			</div>
 		</div>
 
 		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.min.js" crossorigin="anonymous"></script>
 
+		<script src="/js/palette.js/palette.js"></script>
 		<script src="/js/adoption.js"></script>
 	</body>
 </html>

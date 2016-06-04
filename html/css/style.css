@@ -1,0 +1,27 @@
+body {
+	padding-top: 70px;
+}
+
+.has-error .form-control {
+	background: #f88;
+}
+
+canvas.chart {
+	width: 100%;
+	height: 50vh;
+}
+
+#overlay.loading:after {
+	content: "Loading...";
+	position: fixed;
+	display: block;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	line-height: 100vh;
+	text-align: center;
+	background: rgba(255, 255, 255, 0.7);
+}
+
+/* vim: set nocin noet ts=4 sw=4: */
