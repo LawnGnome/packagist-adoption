@@ -3,12 +3,14 @@ redis:
 
 web:
     build: php
-    ports:
-        - 8070:80
     links:
         - redis
     volumes:
         - .:/var/www:ro
         - ./php/php.ini:/usr/local/etc/php/php.ini:ro
+    environment:
+        VIRTUAL_HOST: packagist.adamharvey.name
+        LETSENCRYPT_HOST: packagist.adamharvey.name
+        LETSENCRYPT_EMAIL: aharvey@php.net
   
 # vim: set et ts=4 sw=4:
